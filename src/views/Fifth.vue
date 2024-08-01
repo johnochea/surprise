@@ -51,7 +51,7 @@ export default {
       <video ref="video">Unavailable</video>
       
       <canvas ref="canvas" style="display: none;"/>
-      <p class="cursive">Happy GF day, boss!</p>
+      <p class="cursive">Happy GF's day, boss!</p>
     </div>
     <button class="showbutton" @click="hidePic()">{{ isHidden ? 'Show' : 'Hide'}} me</button>
   </div>
