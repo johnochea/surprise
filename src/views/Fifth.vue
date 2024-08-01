@@ -48,7 +48,7 @@ export default {
     <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk5aHpkMXBmNGdwMGc0OHRzaDQ2OWdtMGtjNmZrMm1xdjlocmJvOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pHSNsdk7IzjzZ4qjOy/giphy.webp" width="120" height="111" style="" frameBorder="0" class="logo"/>
     <div class="polaroid">
       <img src="@/assets/mepic.png" class="mepic" v-show="isHidden === false">
-      <video ref="video" height="480">Unavailable</video>
+      <video ref="video" height="420">Unavailable</video>
       
       <canvas ref="canvas" style="display: none;"/>
       <p class="cursive">Happy GF's day, boss!</p>
@@ -62,11 +62,11 @@ export default {
 
 .mepic {
   display: sticky;
-  width: 300px;
-  height: 370px;
+  width: 280px;
+  height: 340px;
   position: fixed;
-  margin-left: -340px;
-  margin-top: 110px;
+  margin-left: -280px;
+  margin-top: 80px;
 
 }
 
@@ -86,7 +86,7 @@ export default {
     font-family: "Cedarville Cursive", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 60px;
+    font-size: 32px;
     color: rgb(114, 27, 42);
   }
 
@@ -100,8 +100,8 @@ export default {
   .polaroid {
     margin-top: 20px;
     background-color: white;
-    height: 70vh;
-    width: 38vw;
+    height: 600px;
+    width: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
