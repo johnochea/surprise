@@ -62,11 +62,11 @@ export default {
 
 .mepic {
   display: sticky;
-  width: 16vw;
-  height: 20vw;
-  position:fixed;
-  margin-left: -18.3vw;
-  margin-top: 7vh;
+  width: 300px;
+  height: 370px;
+  position: fixed;
+  margin-left: -340px;
+  margin-top: 70px;
 
 }
 
