@@ -46,8 +46,8 @@ export default {
 <template>
   <div class="about">
     <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk5aHpkMXBmNGdwMGc0OHRzaDQ2OWdtMGtjNmZrMm1xdjlocmJvOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pHSNsdk7IzjzZ4qjOy/giphy.webp" width="120" height="111" style="" frameBorder="0" class="logo"/>
-    <img src="@/assets/mepic.png" class="mepic" v-show="isHidden === false">
     <div class="polaroid">
+      <img src="@/assets/mepic.png" class="mepic" v-show="isHidden === false">
       <video ref="video">Unavailable</video>
       
       <canvas ref="canvas" style="display: none;"/>
@@ -66,7 +66,7 @@ export default {
   height: 370px;
   position: fixed;
   margin-left: -340px;
-  margin-top: 70px;
+  margin-top: 110px;
 
 }
 
