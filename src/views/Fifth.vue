@@ -3,9 +3,17 @@ import {RouterLink} from 'vue-router'
 
 export default {
   name: "Fifth",
+  data() {
+    return {
+      video: null,
+      canvas: null,
+      isHidden: false,
+    }
+  },
   mounted() {
     this.video = this.$refs.video
     this.canvas = this.$refs.canvas
+    this.mepic = this.$refs.mepic
     this.startCapture()
   },
   methods: {
@@ -25,14 +33,12 @@ export default {
     initializeCanvas(){
       this.canvas.setAttribute('width', this.video.videoWidth)
       this.canvas.setAttribute('height', this.video.videoHeight)
+    },
+    hidePic(){
+      this.isHidden = !this.isHidden
     }
   },
-  data() {
-    return {
-      video: null,
-      canvas: null,
-    }
-  }
+  
 }
 
 </script>
@@ -40,18 +46,33 @@ export default {
 <template>
   <div class="about">
     <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXk5aHpkMXBmNGdwMGc0OHRzaDQ2OWdtMGtjNmZrMm1xdjlocmJvOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pHSNsdk7IzjzZ4qjOy/giphy.webp" width="120" height="111" style="" frameBorder="0" class="logo"/>
-
+    <img src="@/assets/mepic.png" class="mepic" v-show="isHidden === false">
     <div class="polaroid">
       <video ref="video">Unavailable</video>
-      <!-- <button @click="takePicture()">Take picture</button> -->
+      
       <canvas ref="canvas" style="display: none;"/>
       <p class="cursive">Happy GF day, boss!</p>
     </div>
+    <button class="showbutton" @click="hidePic()">{{ isHidden ? 'Show' : 'Hide'}} me</button>
   </div>
 </template>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+.mepic {
+  display: sticky;
+  width: 16vw;
+  height: 20vw;
+  position:fixed;
+  margin-left: -18.3vw;
+  margin-top: 7vh;
+
+}
+
+.showbutton {
+  margin-top: 40px;
+}
 
   .about {
     display: flex;
